@@ -19,15 +19,20 @@ def days_in_month(year, month):
 
     return days[month - 1]
 
-test_years = [1900, 2000, 2016, 1987]
-test_months = [2, 2, 1, 11]
-test_results = [28, 29, 31, 30]
-for i in range(len(test_years)):
-    yr = test_years[i]
-    mo = test_months[i]
-    print(yr, mo, "->", end="")
-    result = days_in_month(yr, mo)
-    if result == test_results[i]:
-        print("OK")
-    else:
-        print("Fallido")
+def day_of_year(year, month, day):
+    if month < 1 or month > 12:
+        return None
+
+    dim = days_in_month(year, month)
+    if dim is None or day < 1 or day > dim:
+        return None
+
+    total_days = 0
+
+    for m in range(1, month):
+        total_days += days_in_month(year, m)
+
+    return total_days + day
+
+
+print(day_of_year(2000, 12, 31))

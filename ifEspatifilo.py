@@ -5,4 +5,4 @@ if palabra == "ESPATIFILO":
 elif palabra == "espatifilo":
     print("No, ¡quiero un gran Espatifilo!")
 else:
-    print("¡Espatifilo!, no ", palabra)
+    print("¡Espatifilo!, no", palabra)

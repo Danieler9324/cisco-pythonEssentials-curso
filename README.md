@@ -13,4 +13,3 @@ Aprender los conceptos fundamentales de Python, comprendiendo su sintaxis y logi
 - Ciclos (`for`, `while`)
 - Funciones
 - Listas
-- Manejo basico de excepciones
